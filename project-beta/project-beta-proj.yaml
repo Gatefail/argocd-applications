@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: project-beta
+  namespace: argocd
+spec:
+  description: Project-beta
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - 'git@github.com:Gatefail/argocd-setup.git'
+  # Only permit applications to deploy to the argocd namespace in the same cluster
+  destinations:
+  - namespace: project-beta
+    server: https://kubernetes.default.svc
+  ## Allow creation of namespace as cluster-wide resource
+  clusterResourceWhitelist:
+  - group: ''
+    kind: 'Namespace'
+  roles:
+  # sync privileges that can be granted to a CI system user
+  - name: project-beta-sync-ci-role
+    description: Sync privileges for project-beta
+    policies:
+    - p, proj:project-beta:project-beta-sync-ci-role, applications, sync, project-beta/project-beta-app, allow
