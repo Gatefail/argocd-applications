@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: project-gamma
+  namespace: argocd
+spec:
+  description: Project-Gamma
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - 'git@github.com:Gatefail/argocd-setup.git'
+  # Only permit applications to deploy to the argocd namespace in the same cluster
+  destinations:
+  - namespace: project-gamma
+    server: https://kubernetes.default.svc
+  ## Allow creation of namespace as cluster-wide resource
+  clusterResourceWhitelist:
+  - group: ''
+    kind: 'Namespace'
+  roles:
+  # sync privileges that can be granted to a CI system user
+  - name: project-gamma-sync-ci-role
+    description: Sync privileges for project-gamma
+    policies:
+    - p, proj:project-gamma:project-gamma-sync-ci-role, applications, sync, project-gamma/project-gamma-app, allow

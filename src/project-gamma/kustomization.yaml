@@ -2,6 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: argocd
 resources:
-    - ./project-alpha
-    - ./project-beta
-    - ./project-gamma
+    - ./project-gamma-proj.yaml
+    - ./project-gamma-app.yaml
+    - ./project-gamma-ns.yaml
