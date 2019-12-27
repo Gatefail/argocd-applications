@@ -1,0 +1,3 @@
+[
+    {"op": "add", "path": "/spec/sourceRepos/-", "value": "git@github.com:Gatefail/project-beta.git"}
+  ]

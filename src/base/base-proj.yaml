@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: gatefail
+  name: project
   namespace: argocd
 spec:
   description: Base gatefail project
   # Allow manifests to deploy from any Git repos
   sourceRepos:
   - 'git@github.com:Gatefail/argocd-setup.git'
-  - 'git@gitbhut.com:Gatefail/argocd-applications.git'
+  - 'git@github.com:Gatefail/argocd-applications.git'
   ## Allow creation of namespace as cluster-wide resource
   clusterResourceWhitelist:
   - group: ''

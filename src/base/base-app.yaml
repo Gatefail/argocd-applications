@@ -2,12 +2,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: gatefail
+  name: app
   # You'll usually want to add your resources to the argocd namespace.
   namespace: argocd
 spec:
-  # The project the application belongs to.
-  project: project-alpha
   # Source of the application manifests
   source:
     repoURL: git@github.com:Gatefail/argocd-applications.git
