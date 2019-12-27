@@ -4,4 +4,3 @@ namespace: argocd
 resources:
     - ./project-alpha
     - ./project-beta
-    - ./project-gamma
