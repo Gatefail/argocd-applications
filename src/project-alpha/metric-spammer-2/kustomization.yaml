@@ -4,7 +4,6 @@ namespace: project-alpha
 resources:
     - ./deployment.yaml
     - ./service.yaml
-    - ./service-monitor.yaml
 configMapGenerator:	
 - name: metric-spammer-2-config	
   literals:	
