@@ -30,7 +30,7 @@ spec:
         securityContext:
           runAsNonRoot: true
           runAsUser: 10001
-          readOnlyRootFilesystem: true
+          readOnlyRootFilesystem: false
         livenessProbe:
           httpGet:
             path: /metrics
