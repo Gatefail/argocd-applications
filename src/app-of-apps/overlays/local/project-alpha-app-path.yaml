@@ -4,7 +4,7 @@ kind: Application
 metadata:
   name: project-alpha-app
   # You'll usually want to add your resources to the argocd namespace.
-  namespace: project-alpha
+  namespace: argocd
 spec:
   # Source of the application manifests
   source:
