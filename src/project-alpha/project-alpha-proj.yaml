@@ -1,10 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: project
+  name: project-alpha
   namespace: argocd
 spec:
   description: Project-Alpha
+  sourceRepos:
+  - 'git@github.com:Gatefail/argocd-setup.git'
+  - 'git@github.com:Gatefail/argocd-applications.git'
   # Only permit applications to deploy to the argocd namespace in the same cluster
   destinations:
   - namespace: project-alpha

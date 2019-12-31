@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: project-alpha
+resources:
+    - ./deployment.yaml
+    - ./service.yaml
+configMapGenerator:	
+- name: metric-spammer-1-config	
+  literals:	
+    - Name=metric_spammer_1	
+    - Project="project_beta"

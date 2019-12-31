@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: argocd
+resources:
+    - ./deployment.yaml
+configMapGenerator:	
+- name: metric-spammer-2-config	
+  literals:	
+    - Name=metric_spammer_2	
+    - Project="project_alpha"

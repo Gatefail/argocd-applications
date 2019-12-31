@@ -1,23 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: argocd
-namePrefix: alpha-
-
-bases:
-    - ../base
-
 resources:
-    - ./project-alpha-ns.yaml
-
-patchesStrategicMerge:
-    - ./project-alpha-proj.yaml
+    - ./metric-spammer-1
+    - ./metric-spammer-2
     - ./project-alpha-app.yaml
-
-patchesJson6902:
-- target:
-    group: argoproj.io
-    version: v1alpha1
-    kind: AppProject
-    name: project
-    namespace: argocd
-  path: project_patch.json
+    - ./project-alpha-ns.yaml
+    - ./project-alpha-proj.yaml

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: beta-metric-spammer-2-svc
+  namespace: project-beta
+  labels:
+    name: beta-metric-spammer-2-svc
+spec:
+  ports:
+    # the port that this service should serve on
+  - port: 9002
+    targetPort: 8001
+  selector:
+    name: beta-metric-spammer-2

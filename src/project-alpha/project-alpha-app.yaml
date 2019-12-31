@@ -9,12 +9,11 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  # The project the application belongs to.
   project: project-alpha
-
   # Source of the application manifests
   source:
-    path: project-alpha
+    repoURL: git@github.com:Gatefail/argocd-applications.git
+    targetRevision: HEAD
     
   # Destination cluster and namespace to deploy the application
   destination:
