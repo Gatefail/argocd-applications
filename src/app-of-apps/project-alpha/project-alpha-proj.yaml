@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: project-alpha
-  namespace: project-alpha
+  namespace: argocd
 spec:
   description: Project-Alpha
   sourceRepos:

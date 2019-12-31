@@ -4,6 +4,4 @@ namespace: project-alpha
 resources:
     - ./metric-spammer-1
     - ./metric-spammer-2
-    - ./project-alpha-app.yaml
     - ./project-alpha-ns.yaml
-    - ./project-alpha-proj.yaml
