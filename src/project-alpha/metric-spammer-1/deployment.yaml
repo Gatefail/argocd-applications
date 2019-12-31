@@ -35,11 +35,11 @@ spec:
           httpGet:
             path: /metrics
             port: 8001
-          initialDelaySeconds: 300
+          initialDelaySeconds: 30
           periodSeconds: 3
         readinessProbe:
           httpGet:
             path: /metrics
             port: 8001
-          initialDelaySeconds: 180
+          initialDelaySeconds: 30
           periodSeconds: 3
