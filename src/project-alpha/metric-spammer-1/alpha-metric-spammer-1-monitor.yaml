@@ -9,8 +9,8 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: alpha-metric-spammer-1
-  #namespaceSelector:
+      name: alpha-metric-spammer-1
+  # namespaceSelector:
   #  matchNames:
   #  - project-alpha
   endpoints:
