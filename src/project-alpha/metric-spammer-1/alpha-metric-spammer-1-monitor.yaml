@@ -3,6 +3,8 @@ kind: ServiceMonitor
 metadata:
   name: alpha-metric-spammer-1
   namespace: project-alpha
+  labels:
+    release: prometheus-operator
 spec:
   selector:
     matchLabels:
