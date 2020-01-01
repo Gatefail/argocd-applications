@@ -9,6 +9,7 @@ metadata:
 spec:
   targetLabels:
     - shouldMonitor
+    - __meta_kubernetes_endpoint_port_name
   selector:
     matchLabels:
       shouldMonitor: heckyeah
