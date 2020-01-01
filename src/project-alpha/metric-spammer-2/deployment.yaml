@@ -19,13 +19,9 @@ spec:
       containers:
       - name: alpha-metric-spammer-2
         image: topping/metricspammer:1.0.0
-        resources:
-          limits:
-            cpu: 300m
-            memory: 500Mi
-          requests:
-            cpu: 300m
-            memory: 500Mi
+        envFrom:
+        - configMapRef:
+            name: metric-spammer-2-config
         ports:
         - name: metrics
           containerPort: 8001

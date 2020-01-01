@@ -19,6 +19,9 @@ spec:
         ports:
         - name: metrics
           containerPort: 8001
+        envFrom:
+        - configMapRef:
+            name: metric-spammer-1-config
         livenessProbe:
           httpGet:
             path: /metrics
