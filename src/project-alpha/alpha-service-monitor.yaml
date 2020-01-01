@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: alpha-ns-monitor
-  namespace: project-alpha
+  namespace: monitoring
   labels:
     release: prometheus-operator
     monitoring: true
@@ -11,6 +11,9 @@ spec:
   targetLabels:
     - shouldMonitor
     - __meta_kubernetes_endpoint_port_name
+  namespaceSelector:
+    matchNames:
+    - project-alpha
   selector:
     matchLabels:
       shouldMonitor: heckyeah

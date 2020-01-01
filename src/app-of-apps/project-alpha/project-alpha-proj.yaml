@@ -12,6 +12,8 @@ spec:
   destinations:
   - namespace: project-alpha
     server: https://kubernetes.default.svc
+  - namespace: monitoring
+    server: https://kubernetes.default.svc
   ## Allow creation of namespace as cluster-wide resource
   clusterResourceWhitelist:
   - group: ''
