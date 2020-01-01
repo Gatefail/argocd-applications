@@ -9,10 +9,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      shouldMonitor: heckyeah
-  # namespaceSelector:
-  #  matchNames:
-  #  - project-alpha
+      app: alpha-metric-spammer-1
+      app: alpha-metric-spammer-2
   endpoints:
   - port: metrics
-    interval: 5s

@@ -9,11 +9,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      name: alpha-metric-spammer-1
+      app: alpha-metric-spammer-1
   template:
     metadata:
       labels:
-        name: alpha-metric-spammer-1
+        app: alpha-metric-spammer-1
         shouldMonitor: heckyeah
     spec:
       containers:
@@ -29,19 +29,15 @@ spec:
         ports:
         - name: metrics
           containerPort: 8001
-        securityContext:
-          runAsNonRoot: true
-          runAsUser: 10001
-          readOnlyRootFilesystem: false
         livenessProbe:
           httpGet:
             path: /metrics
             port: 8001
-          initialDelaySeconds: 30
+          initialDelaySeconds: 5
           periodSeconds: 3
         readinessProbe:
           httpGet:
             path: /metrics
             port: 8001
-          initialDelaySeconds: 30
+          initialDelaySeconds: 5
           periodSeconds: 3
