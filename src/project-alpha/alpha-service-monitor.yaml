@@ -8,7 +8,7 @@ metadata:
     monitoring: true
 spec:
   targetLabels:
-    shouldMonitor: heckyeah
+    - shouldMonitor: heckyeah
   selector:
     matchLabels:
       shouldMonitor: heckyeah
