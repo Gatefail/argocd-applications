@@ -11,6 +11,6 @@ spec:
     - project-alpha
   selector:
     matchLabels:
-      app: alpha-metric-spammer-1
+      team: team1
   endpoints:
   - port: metrics

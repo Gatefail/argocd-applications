@@ -5,6 +5,7 @@ metadata:
   namespace: project-alpha
   labels:
     app: alpha-metric-spammer-1
+    team: team1
 spec:
   selector:
     app: alpha-metric-spammer-1
