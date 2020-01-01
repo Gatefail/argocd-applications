@@ -7,5 +7,5 @@ resources:
 configMapGenerator:	
 - name: metric-spammer-1-config	
   literals:	
-    - Name=metric_spammer_1	
-    - Project="project_alpha"
+    - AppStuff.Name=metric_spammer_1	
+    - AppStuff.Project="project_alpha"
