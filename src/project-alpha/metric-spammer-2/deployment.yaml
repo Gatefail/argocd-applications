@@ -6,7 +6,7 @@ metadata:
   labels:
     shouldMonitor: heckyeah
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: alpha-metric-spammer-2
