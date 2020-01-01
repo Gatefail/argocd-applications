@@ -10,9 +10,9 @@ spec:
   selector:
     matchLabels:
       app: alpha-metric-spammer-2
-  namespaceSelector:
-    matchNames:
-    - project-alpha
+ # namespaceSelector:
+ #   matchNames:
+ #   - project-alpha
   endpoints:
   - port: web
     interval: 5s
