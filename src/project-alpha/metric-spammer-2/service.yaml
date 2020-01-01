@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: alpha-metric-spammer-2-svc
+  name: alpha-metric-spammer-2
   namespace: project-alpha
   labels:
-    name: alpha-metric-spammer-2-svc
+    name: alpha-metric-spammer-2
 spec:
   ports:
     # the port that this service should serve on
