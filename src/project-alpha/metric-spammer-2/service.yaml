@@ -5,6 +5,7 @@ metadata:
   namespace: project-alpha
   labels:
     name: alpha-metric-spammer-2
+    monitoring: true
 spec:
   ports:
   - name: metrics

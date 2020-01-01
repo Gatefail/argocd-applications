@@ -5,6 +5,7 @@ metadata:
   namespace: project-alpha
   labels:
     release: prometheus-operator
+    monitoring: true
 spec:
   selector:
     matchLabels:
