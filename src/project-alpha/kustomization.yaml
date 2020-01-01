@@ -5,3 +5,4 @@ resources:
     - ./metric-spammer-1
     - ./metric-spammer-2
     - ./project-alpha-ns.yaml
+    - ./alpha-service-monitor.yaml

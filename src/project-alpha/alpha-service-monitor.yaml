@@ -9,7 +9,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      name: alpha-metric-spammer-1
+      shouldMonitor: heckyeah
   # namespaceSelector:
   #  matchNames:
   #  - project-alpha

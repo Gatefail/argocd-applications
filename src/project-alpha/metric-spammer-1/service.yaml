@@ -4,7 +4,7 @@ metadata:
   name: alpha-metric-spammer-1
   namespace: project-alpha
   labels:
-    name: alpha-metric-spammer-1
+    shouldMonitor: heckyeah
     monitoring: true
 spec:
   ports:
