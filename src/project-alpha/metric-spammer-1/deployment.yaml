@@ -3,8 +3,6 @@ kind: Deployment
 metadata:
   name: alpha-metric-spammer-1
   namespace: project-alpha
-  labels:
-    shouldMonitor: heckyeah
 spec:
   replicas: 3
   selector:
@@ -14,18 +12,10 @@ spec:
     metadata:
       labels:
         app: alpha-metric-spammer-1
-        shouldMonitor: heckyeah
     spec:
       containers:
       - name: alpha-metric-spammer-1
         image: topping/metricspammer:1.0.0
-        resources:
-          limits:
-            cpu: 300m
-            memory: 500Mi
-          requests:
-            cpu: 300m
-            memory: 500Mi
         ports:
         - name: metrics
           containerPort: 8001

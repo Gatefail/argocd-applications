@@ -5,11 +5,10 @@ metadata:
   namespace: project-alpha
   labels:
     app: alpha-metric-spammer-1
-    shouldMonitor: heckyeah
-    monitoring: true
 spec:
+  selector:
+    app: alpha-metric-spammer-1
   ports:
   - name: metrics
     port: 8001
-  selector:
-    app: alpha-metric-spammer-1
+  
