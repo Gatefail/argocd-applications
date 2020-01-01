@@ -11,5 +11,5 @@ spec:
     matchNames:
     - project-alpha
   endpoints:
-  - port: web
+  - port: metrics
     interval: 5s

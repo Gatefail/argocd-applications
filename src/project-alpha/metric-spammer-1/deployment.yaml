@@ -26,7 +26,8 @@ spec:
             cpu: 300m
             memory: 500Mi
         ports:
-        - containerPort: 8001
+        - name: metrics
+          containerPort: 8001
         securityContext:
           runAsNonRoot: true
           runAsUser: 10001
