@@ -4,7 +4,7 @@ metadata:
   name: alpha-metric-spammer-1
   namespace: project-alpha
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: alpha-metric-spammer-1
